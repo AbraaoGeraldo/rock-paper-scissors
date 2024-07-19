@@ -1,47 +1,80 @@
 console.log("Hello World")
-let pc = Math.random()
 
-function getComputerChoice () {       // Essa funçao tem a logica por tras da escolha da maquina
-     if (pc > 0.1 < 0.3) {
-        console.log("Rock")
-    } else if (pc > 0.4 < 0.6 ) {
-        console.log("Paper")
-    } else if (pc > 0.7 == 1) {
-        console.log("Scissors")
+
+function getComputerChoice () {  
+
+   let pc = Math.random()
+   let choice = ""
+
+   if (pc > 0 < 0.5) {
+      choice = "Rock"
+    } else if (pc > 0.6 < 0.9) {
+      choice = "Paper"
     } else {
-        console.log("Rock")
+      choice = "Scissors"
     }
 
-    return 
+   return choice
         
 }
 
 function getHumanChoice() {
-    prompt("Choose your weapon")
+   let hum = prompt("Choose your weapon")
 
-
+   if (hum === "Rock", "rock", "ROCK", "RocK", "paper", "Paper", "PapeR", "PAPER", "Scissors", "scissors", "ScissorS", "SCISSORS") {
+      return hum
+   }
         
 }
 
 
 
-let humanScore =  0
-let computerScore = 0
+
 
 function playRound(humanChoice, computerChoice) {
     
-    if (getHumanChoice === pc) {
-        console.log("Empate")
-    } else if (getHumanChoice === "Rock", "rock", "RocK", "ROCK" && pc > 0.7 == 1) {
-        console.log("You win!")
-    } else if (getHumanChoice === "Paper", "paper", "PapeR", "PAPER" && pc > 0.1 < 0.3 || 0) {
-        console.log("You Win!")
-    } else if (getHumanChoice === "Scissors", "scissors", "ScissorS", "SCISSORS" && pc > 0.4 < 0.6) {
-        console.log("You Win!")
-    }
-    
-    // your code here!
+   humanChoice = getHumanChoice()
+   computerChoice = getComputerChoice()
+
+   if (humanChoice === "Rock", "rock", "ROCK", "RocK") {
+      if (computerChoice === "Scissors") {
+         humanScore++
+         console.log("You Win!")
+      } else if (computerChoice === "Paper") {
+         computerScore++
+         console.log("You Lose")
+      } else {
+         console.log("Empate!")
+         
+      } 
+   } else if (humanChoice === "paper", "Paper", "PapeR", "PAPER") {
+      if (computerChoice === "Rock") {
+         humanScore++
+         console.log("You Win!")
+      } else if(computerChoice === "Scissors") {
+         computerScore++
+         console.log("You Lose")
+      } else {
+         console.log("Empate")
+      }
+   } else if (humanChoice === "Scissors", "scissors", "ScissorS", "SCISSORS") {
+      if (computerChoice === "Paper") {
+         humanScore++
+         console.log("You Win!")
+      } else if (computerChoice === "Rock") {
+         computerScore++
+         console.log("You Lose!") 
+      } else {
+         console.log("Empate")
+      }
+   }
+
+
 }
+
+let humanScore =  0
+let computerScore = 0
+
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();

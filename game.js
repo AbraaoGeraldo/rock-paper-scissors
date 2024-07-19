@@ -6,9 +6,9 @@ function getComputerChoice () {
    let pc = Math.random()
    let choice = ""
 
-   if (pc > 0 < 0.5) {
+   if (pc >= 0 < 0.5) {
       choice = "Rock"
-    } else if (pc > 0.6 < 0.9) {
+    } else if (pc >= 0.6 < 0.9) {
       choice = "Paper"
     } else {
       choice = "Scissors"

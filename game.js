@@ -115,10 +115,10 @@ function playGame() {
       console.log('CPU Wins!')
    }
 
-   playGame()
-   playGame()
-   playGame()
-   playGame()
-   playGame()
+  
 }
-
+playGame()
+playGame()
+playGame()
+playGame()
+playGame()

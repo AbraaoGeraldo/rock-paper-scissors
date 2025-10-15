@@ -14,4 +14,4 @@ function getComputerChoice() {
     }
 }
 
-getComputerChoice()
+getComputerChoice();

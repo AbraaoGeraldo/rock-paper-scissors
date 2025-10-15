@@ -1,5 +1,5 @@
-playerScore =1;
-cpuSccore = 1;
+let playerScore =1;
+let cpuSccore = 1;
 
 function getComputerChoice() {
     let cpu = parseInt(Math.random() * 10 + 1);

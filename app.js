@@ -2,7 +2,7 @@ let playerScore =1;
 let cpuSccore = 1;
 
 let rock = 'Rock';
-let paper = 'paper';
+let paper = 'Paper';
 let scissors = 'Scissors'
 
 function getComputerChoice() {
@@ -29,4 +29,4 @@ function getHumanChoice() {
 }
 
 getComputerChoice();
-getHumanChoice()
+getHumanChoice();

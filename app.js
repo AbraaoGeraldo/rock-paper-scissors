@@ -6,11 +6,11 @@ function getComputerChoice() {
     let cpuChoice = '';
 
     if (cpu > 5) {
-        console.log('Tesoura');
+        cpuChoice = 'Scissors';
     } else if (cpu < 5) {
-        console.log('Pedra');
+        cpuChoice = 'Rock';
     } else {
-        console.log('Papel')
+        cpuChoice = "Paper";
     }
 }
 

@@ -28,10 +28,5 @@ function getHumanChoice() {
     }
 }
 
-
-
-
-
-
 getComputerChoice();
 getHumanChoice();

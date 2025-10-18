@@ -1,5 +1,5 @@
 let playerScore =1;
-let cpuSccore = 1;
+let cpuScore = 1;
 
 let rock = 'Rock';
 let paper = 'Paper';
@@ -10,11 +10,11 @@ function getComputerChoice() {
     let cpuChoice = '';
 
     if (cpu > 5) {
-        cpuChoice = scissors;
+        cpuChoice = 'scissors';
     } else if (cpu < 5) {
-        cpuChoice = rock;
+        cpuChoice = 'rock';
     } else {
-        cpuChoice = paper;
+        cpuChoice = 'paper';
     }
 
     return cpuChoice;
@@ -23,10 +23,30 @@ function getComputerChoice() {
 function getHumanChoice() {
     let playerChoice = prompt('Choose your weapon');
 
-    if (playerChoice == "Rock", "rock", "ROCK", "RocK", "paper", "Paper", "PapeR", "PAPER", "Scissors", "scissors", "ScissorS", "SCISSORS") {
+    if (playerChoice == 'rock', 'paper', 'scissors') {
         return playerChoice;
+    }
+
+    return playerChoice
+}
+
+function battle(userChoice, pcChoice) {
+
+    userChoice = getHumanChoice();
+    pcChoice = getComputerChoice();
+
+
+    if (userChoice === 'rock') {
+        if (pcChoice === 'scissors') {
+            alert(`You Lose! CPU Score: ${cpuScore ++}`)
+        } else if (pcChoice === 'paper') {
+            alert(`You Win! Player Score: ${playerScore ++}`)
+        } else {
+            alert(`DRAW Score: ${cpuScore++, playerScore ++}`)
+        }
+    } else {
+        alert('erro')
     }
 }
 
-getComputerChoice();
-getHumanChoice();
+battle();

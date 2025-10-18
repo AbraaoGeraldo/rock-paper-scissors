@@ -85,33 +85,36 @@ playRound(humanSelection, computerSelection);
 
 function playGame() {
 
-  let humanChoice = getHumanChoice()
-  let computerChoice = getComputerChoice()
+  humanChoice = getHumanChoice()
+  computerChoice = getComputerChoice()
+
+   let Player = humanScore;
+   let CPU = computerScore;
 
 
-   if (humanScore == 1 && computerScore == 0) {
+   if (Player == 1 && CPU == 0) {
       console.log('Player: 1 CPU: 0')
-   } else if (humanScore == 1 && computerScore == 1) {
+   } else if (Player == 1 && CPU == 1) {
       console.log('Player: 1 CPU: 1')
-   } else if (humanScore == 2 && computerScore == 0) {
+   } else if (Player == 2 && CPU == 0) {
       console.log('Player: 2 CPU: 0')
-   } else if (humanScore == 2 && computerScore == 2) {
+   } else if (Player == 2 && CPU == 2) {
       console.log('Player: 3 CPU: 3')
-   } else if (humanScore == 3 && computerScore == 0) {
+   } else if (Player == 3 && CPU == 0) {
       console.log('Player Wins')
-   } else if (humanScore == 3 && computerScore == 3) {
+   } else if (Player == 3 && CPU == 3) {
       console.log('Player: 3 CPU: 3')
-   } else if (humanScore == 4 && computerScore == 4) {
+   } else if (Player == 4 && CPU == 4) {
       console.log('Player: 4 CPU: 4')
-   } else if (humanScore == 5 && computerScore == 4) {
+   } else if (Player == 5 && CPU == 4) {
       console.log('Big Draw!')
    }
 
-   if (computerScore == 1 && humanScore == 0) {
+   if (computerScore == 1 && Player == 0) {
       console.log('Player: 0 CPU: 1')
-   } else if (computerScore == 2 && humanScore == 0) {
+   } else if (computerScore == 2 && Player == 0) {
       console.log('Player: 0 CPU: 2')
-   } else if (computerScore == 3 && humanScore == 0) {
+   } else if (computerScore == 3 && Player == 0) {
       console.log('CPU Wins!')
    }
 

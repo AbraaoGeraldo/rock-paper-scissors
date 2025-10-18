@@ -13,7 +13,7 @@ function getComputerChoice() {
         cpuChoice = 'scissors';
     } else if (cpu < 5) {
         cpuChoice = 'rock';
-    } else {
+    } else if (cpu = 0){
         cpuChoice = 'paper';
     }
 
@@ -38,14 +38,30 @@ function battle(userChoice, pcChoice) {
 
     if (userChoice === 'rock') {
         if (pcChoice === 'scissors') {
-            alert(`You Lose! CPU Score: ${cpuScore ++}`)
+            alert(`You Lose! CPU Score: ${cpuScore ++}`);
         } else if (pcChoice === 'paper') {
-            alert(`You Win! Player Score: ${playerScore ++}`)
+            alert(`You Win! Player Score: ${playerScore ++}`);
         } else {
-            alert(`DRAW Score: ${cpuScore++, playerScore ++}`)
+            alert(`DRAW Score: ${cpuScore++, playerScore ++}`);
+        }
+    } else if (userChoice === 'paper') {
+        if (pcChoice === 'rock') {
+            alert(`You Lose! CPU Score: ${cpuScore ++}`);
+        } else if (pcChoice === 'scissors') {
+            alert(`You Win! Player Score: ${playerScore ++}`);
+        } else {
+            alert(`DRAW Score: ${cpuScore++, playerScore ++}`);
+        }
+    } else if (userChoice === 'scissors') {
+        if (pcChoice == 'rock') {
+            alert(`You Lose! CPU Score: ${cpuScore ++}`);
+        } else if (pcChoice == 'paper') {
+            alert(`You Win! Player Score: ${playerScore ++}`);
+        } else {
+            alert(`DRAW Score: ${cpuScore++, playerScore ++}`);
         }
     } else {
-        alert('erro')
+        battle()
     }
 }
 
